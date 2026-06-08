@@ -148,23 +148,13 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"wfh_presence.tasks.all"
-# 	],
-# 	"daily": [
-# 		"wfh_presence.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"wfh_presence.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"wfh_presence.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"wfh_presence.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"cron": {
+		"*/5 * * * *": [
+			"wfh_presence.tasks.check_missed_heartbeats"
+		]
+	}
+}
 
 # Testing
 # -------
