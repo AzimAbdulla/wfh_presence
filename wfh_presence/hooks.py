@@ -150,7 +150,7 @@ app_license = "mit"
 
 scheduler_events = {
 	"cron": {
-		"*/5 * * * *": [
+		"*/1 * * * *": [
 			"wfh_presence.tasks.check_missed_heartbeats"
 		]
 	}

@@ -5,7 +5,7 @@ def check_missed_heartbeats():
     """Scheduled job running every 5 minutes to close stale sessions."""
     now = now_datetime()
     # 15 minutes ago
-    cutoff_time = add_to_date(now, minutes=-15)
+    cutoff_time = add_to_date(now, minutes=-3)
     
     # Find active sessions with missed heartbeats
     stale_sessions = frappe.get_all(
